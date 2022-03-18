@@ -1,0 +1,177 @@
+/* container-five */
+@mixin onlylarge($w)
+{
+	@media only screen and (max-width:$w){
+		@content
+	}
+}
+
+$dark-two:#222222;
+$dark:#1F2428;
+
+$white:#FFFFFF;
+
+.container-five{
+    margin-top: 160px;
+    @include onlylarge(1024px){
+        margin-top: 60px;
+      }
+    .txt{
+        .txt-one{
+            font-weight: 800;
+            font-size: 44px;
+            line-height: 127%;
+            color: $dark;
+            padding-bottom: 20px;
+            width: 824px;
+            @include onlylarge(1024px){
+               width: 100%;
+           }
+
+           @include onlylarge(1024px){
+              font-size: 40px;
+          }
+
+          @include onlylarge(1024px){
+              font-size: 30px;
+          }
+        }
+
+        .txt-two{
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 180%;
+            color: $dark;
+            width: 760px;
+            @include onlylarge(1024px){
+                width: 100%;
+           }
+           @include onlylarge(1024px){
+              font-size: 15px;
+           }
+        }
+    }
+   .deliveri{
+       margin-top: 96px;
+       display: flex;
+       justify-content: space-between;
+       margin-left: 35px;
+       flex-wrap: wrap;
+       @include onlylarge(1024px){
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 38px;
+   }
+      .forms{
+        position: relative;
+        span{
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 129%;
+            color: $dark-two;
+        }
+
+        .images{
+            position: absolute;
+            top: 35px;
+            left: -3px;
+        }
+
+        .first{
+            .form-select{
+                width: 246px;
+                border: none;
+                border-bottom: 1px solid #222222;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 100%; 
+                border-radius: 0em;
+                padding: 1.375rem 2.25rem 1.375rem 2.75rem;
+                @include onlylarge(1024px){
+                    width: 100%;
+               }
+                
+            }
+            
+        }
+    }
+
+    .forms-two{
+        position: relative;
+        @include onlylarge(1024px){
+            margin-top: 20px;
+       }
+        .images-two{
+            position: absolute;
+            top: 35px;
+        }
+        .second{
+          
+            .mb-3{
+                .form-control{
+                    width: 247px;
+                    border-radius: 0em;
+                    border: none;
+                    border-bottom: 1px solid #222222;
+                    padding-left: 44px;
+                    
+                    /* padding-bottom: 1.375em; */
+                    padding-top: 10px;
+                    padding-bottom: 23px; 
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 100%; 
+                    @include onlylarge(1024px){
+                        width: 100%;
+                   }
+                    
+                }
+
+                .form-label{
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 129%;
+                    color: $dark-two;
+                }
+            }
+        }
+    }
+    .one-more{
+        margin-top: 0;
+    }
+  }
+
+  form{
+      button{
+        background: #00C97B;
+        box-shadow: 0px 4px 4px rgba(1, 203, 124, 0.2);
+        border-radius: 36px;
+        width: 240px; 
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 18px;
+        color: $white;
+        text-align: center;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        border: none;
+        cursor: pointer;
+        transition: 0.8s; 
+        margin-left: 35px;
+        margin-top: 16px;
+        @include onlylarge(1024px){
+              margin-left: 0;
+         }
+
+         @include onlylarge(768px){
+            width: 100%;
+         }
+      }
+
+      button:hover{
+        background-color:$dark;
+        box-shadow: none;
+    }
+  }
+
+}

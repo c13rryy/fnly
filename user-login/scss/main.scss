@@ -1,0 +1,223 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*************/
+.wrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.center {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+
+.banner {
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.pictures {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Gilroy';
+}
+
+
+
+
+
+
+@mixin onlylarge($w)
+{
+	@media only screen and (max-width:$w){
+		@content
+	}
+}
+
+
+$white:#FFFFFF;
+$dark:#1F2428;
+
+
+
+/* user */
+
+
+.user{
+    margin-top: 240px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 70px rgba(138, 138, 138, 0.1);
+    border-radius: 16px;
+    width: 480px; 
+    @include onlylarge(600px){
+      width: 100%;
+      }
+    p{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 133%;
+        color: $dark; 
+        width: 317px;
+        padding-left: 42px;
+        padding-top: 42px;
+        @include onlylarge(600px){
+          width: 100%;
+          padding-left: 0;
+          }
+    }
+    
+
+    .first{
+        padding-left: 42px;
+        padding-top: 21px;
+        @include onlylarge(600px){
+           padding-left: 0;
+          }
+        .txt-one{
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 225%;
+            color: $dark; 
+            padding-left: 0;
+            padding-top: 0;
+        }
+
+        .txt-two{
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 225%;
+            color: $dark; 
+            padding-left: 0;
+            padding-top: 0;
+        }
+
+        #email{
+            background: #FCFDFF;
+            /* 5 */
+            
+            border: 1px solid #C0C9D7;
+            box-sizing: border-box;
+            border-radius: 6px; 
+            height: 40px;
+            width: 400px;
+            @include onlylarge(600px){
+              width: 300px;
+              }
+        }
+
+        #password{
+            background: #FCFDFF;
+            /* 5 */
+            
+            border: 1px solid #C0C9D7;
+            box-sizing: border-box;
+            border-radius: 6px; 
+            height: 40px;
+            width: 400px;
+            @include onlylarge(600px){
+              width: 300px;
+              }
+        }
+
+        form{
+            button{
+                background: linear-gradient(90deg, #00C97B 0%, #00D981 96.96%);
+                box-shadow: 0px 4px 4px rgba(1, 203, 124, 0.2);
+                border-radius: 36px;
+                width: 180px;
+                padding-top: 21px;
+                padding-bottom: 21px; 
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 120%;
+                color: #FFFFFF;  
+                text-align: center;  
+                border: none;   
+                margin-top: 50px;
+                transition: 0.8s;
+                cursor: pointer;
+                @include onlylarge(600px){
+                  width: 100%;
+                  }
+            }
+
+            button:hover{
+                background: #1F2428;
+                box-shadow: none;
+            }
+        }
+    }
+
+    .images{
+        position: relative;
+        width: 200px;
+        left: 278px;
+        top: -56px;
+        @include onlylarge(600px){
+          left: 0;
+          top: 0;
+          padding-top: 21px;
+          padding-bottom: 30px;
+          display: flex;
+          justify-content: space-between;
+
+        }
+    }
+}

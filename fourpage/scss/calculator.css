@@ -1,0 +1,201 @@
+/* container-five */
+.container-five {
+  margin-top: 160px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container-five {
+    margin-top: 60px;
+  }
+}
+
+.container-five .txt .txt-one {
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 127%;
+  color: #1F2428;
+  padding-bottom: 20px;
+  width: 824px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container-five .txt .txt-one {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container-five .txt .txt-one {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container-five .txt .txt-one {
+    font-size: 30px;
+  }
+}
+
+.container-five .txt .txt-two {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 180%;
+  color: #1F2428;
+  width: 760px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container-five .txt .txt-two {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container-five .txt .txt-two {
+    font-size: 15px;
+  }
+}
+
+.container-five .deliveri {
+  margin-top: 96px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 35px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container-five .deliveri {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 0;
+    margin-top: 38px;
+  }
+}
+
+.container-five .deliveri .forms {
+  position: relative;
+}
+
+.container-five .deliveri .forms span {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 129%;
+  color: #222222;
+}
+
+.container-five .deliveri .forms .images {
+  position: absolute;
+  top: 35px;
+  left: -3px;
+}
+
+.container-five .deliveri .forms .first .form-select {
+  width: 246px;
+  border: none;
+  border-bottom: 1px solid #222222;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  border-radius: 0em;
+  padding: 1.375rem 2.25rem 1.375rem 2.75rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container-five .deliveri .forms .first .form-select {
+    width: 100%;
+  }
+}
+
+.container-five .deliveri .forms-two {
+  position: relative;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container-five .deliveri .forms-two {
+    margin-top: 20px;
+  }
+}
+
+.container-five .deliveri .forms-two .images-two {
+  position: absolute;
+  top: 35px;
+}
+
+.container-five .deliveri .forms-two .second .mb-3 .form-control {
+  width: 247px;
+  border-radius: 0em;
+  border: none;
+  border-bottom: 1px solid #222222;
+  padding-left: 44px;
+  /* padding-bottom: 1.375em; */
+  padding-top: 10px;
+  padding-bottom: 23px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container-five .deliveri .forms-two .second .mb-3 .form-control {
+    width: 100%;
+  }
+}
+
+.container-five .deliveri .forms-two .second .mb-3 .form-label {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 129%;
+  color: #222222;
+}
+
+.container-five .deliveri .one-more {
+  margin-top: 0;
+}
+
+.container-five form button {
+  background: #00C97B;
+  -webkit-box-shadow: 0px 4px 4px rgba(1, 203, 124, 0.2);
+          box-shadow: 0px 4px 4px rgba(1, 203, 124, 0.2);
+  border-radius: 36px;
+  width: 240px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  margin-left: 35px;
+  margin-top: 16px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container-five form button {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container-five form button {
+    width: 100%;
+  }
+}
+
+.container-five form button:hover {
+  background-color: #1F2428;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+/*# sourceMappingURL=calculator.css.map */

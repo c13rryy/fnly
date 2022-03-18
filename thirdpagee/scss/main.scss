@@ -1,0 +1,904 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*************/
+
+.wrapper{
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.center{
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.banner{
+    max-width: 1800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.pictures{
+	max-width: 1100px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+body{
+	font-family: 'Gilroy';
+}
+
+
+/* header */
+
+@mixin onlylarge($w)
+{
+	@media only screen and (max-width:$w){
+		@content
+	}
+}
+
+
+$white:#FFFFFF;
+$dark:#1F2428;
+
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    @include onlylarge(1100px){
+        width: 100%;
+      }
+    .navigation{
+
+        @include onlylarge(1100px){
+            display: none;
+            min-height: 100vh;
+            background: rgba(0,0,0,0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 85%;
+            min-width: 270px;
+            color: #fff;
+            padding-top: 130px;
+            transition: 1s;
+            z-index: 10; 
+          }
+
+       
+        ul{
+            display: flex;
+            align-items: center;
+            @include onlylarge(1100px){
+                flex-direction: column;
+              }
+            li{
+                
+                margin-right: 40px;
+                @include onlylarge(1300px){
+                    margin-right: 25px;
+                  }
+                  @include onlylarge(1150px){
+                    margin-right: 15px;
+                  }
+
+                  @include onlylarge(1100px){
+                    margin-bottom: 30px;
+                  }
+
+                 
+                a{
+                    text-decoration: none;
+                    font-weight: 600;
+                    font-size: 15px;
+                    line-height: 107%;
+                    color:$dark ; 
+                    transition: 0.8s;
+                    cursor: pointer;
+                    @include onlylarge(1100px){
+                        color: #FFFFFF;
+                      }
+                }
+
+                a:hover{
+                    color: #00C97B;
+                }
+            }
+
+           
+
+            .user{
+                margin-left: 97px;
+                @include onlylarge(1400px){
+                       margin-left: 0px;
+                  }
+                a{
+                    img{
+                        vertical-align: middle;
+                        @include onlylarge(1100px){
+                            display: none;
+                          }
+                    }
+                }
+            }
+            .buton{
+              
+                    form{
+                        button{
+                            background: #00C97B;
+                            box-shadow: 0px 4px 4px rgba(1, 203, 124, 0.2);
+                            border-radius: 36px; 
+                            width: 170px;
+                            font-weight: 700;
+                            font-size: 13px;
+                            line-height: 138%;
+                            text-align: center;
+                            color: $white; 
+                            border: none;
+                            padding-top: 17px;
+                            padding-bottom: 17px;
+                            transition: 0.8s;
+                            cursor: pointer;
+                        }
+
+                        button:hover{
+                            background-color: #1F2428;
+                            box-shadow: none;
+                        }
+                    }
+                
+            }
+        }
+    }
+
+    .burger{
+        width: 30px;
+        height: 30px;
+        display: none;
+        @include onlylarge(1100px){
+            display: block;
+          }
+    }
+
+
+}
+
+@media screen and (max-width: 1100px) {
+    header .navigation.show{
+        left: 0;
+    }
+
+
+}
+/* baner-info */
+
+.baner-info{
+	font-family: 'Gilroy';
+	background: linear-gradient(79.63deg, #5B52A3 1.08%, #40B8EA 100%);
+	border-radius: 36px;
+	margin-top: 20px;
+}
+
+.baner-info .txt-baner .txt .descr{
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 108%;
+	color: #FFFFFF;
+	margin-bottom: 29px;
+	padding-top: 25px;
+}
+
+.baner-info .txt-baner .txt h1{
+	font-weight: 800;
+	font-size: 48px;
+	line-height: 125%;
+	color: #FFFFFF;
+	margin-bottom: 9px;	
+}
+
+.baner-info .txt-baner .txt .descr-two{
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 30px;
+	color: #FFFFFF;
+}
+.baner-info form button{
+	background:#01CD7D;
+    box-shadow: 0px 4px 4px rgba(1, 203, 124, 0.2);
+    border-radius: 36px;
+	border: none;
+	font-weight: bold;
+	font-size: 17px;
+	line-height: 106%;
+	text-align: center;
+	color: #FFFFFF;
+	width: 260px;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	margin-top: 40px;
+	margin-bottom: 107px;
+	transition: 0.8s;
+	cursor: pointer;
+}
+
+.baner-info form button:hover{
+	background-color: #1F2428;
+	box-shadow:none ;
+}
+
+
+/* container-cost */
+
+.container-cost{
+    margin-top: 121px;
+}
+
+.container-cost .salle-info{
+	display: flex;
+	justify-items: center;
+	justify-content: center;
+}
+
+.container-cost .salle-info h3{
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 127%;  
+    color: #1F2428;
+    width: 700px; 
+    margin-bottom: 70px;
+
+}
+
+
+.container-cost .card-animation{
+    display: grid;
+	grid-template-columns: 328px 328px 328px;
+	column-gap: 40px;
+	row-gap: 40px;
+	justify-content: center;
+}
+
+
+
+
+
+.container-cost .card-animation .first,
+.container-cost .card-animation .second,
+.container-cost .card-animation .third,
+.container-cost .card-animation .fourth,
+.container-cost .card-animation .fifth,
+.container-cost .card-animation .sixth,
+.container-cost .card-animation .sevth,
+.container-cost .card-animation .eith,
+.container-cost .card-animation .nineth,
+.container-cost .card-animation .tenth{
+    width: 328px;
+    height: 360px;
+    perspective: 1000px;
+}
+
+
+.container-cost .card-animation .first .pictures-one,
+.container-cost .card-animation .second .pictures-two,
+.container-cost .card-animation .third .pictures-three,
+.container-cost .card-animation .fourth .pictures-four,
+.container-cost .card-animation .fifth .pictures-five,
+.container-cost .card-animation .sixth .pictures-six,
+.container-cost .card-animation .sevth .pictures-seven,
+.container-cost .card-animation .eith .pictures-eight,
+.container-cost .card-animation .nineth .pictures-nine,
+.container-cost .card-animation .tenth .pictures-ten{
+    width: 328px;
+    height:360px ;
+}
+
+.container-cost .card-animation .first .pictures-one img,
+.container-cost .card-animation .second .pictures-two img,
+.container-cost .card-animation .third .pictures-three img,
+.container-cost .card-animation .fourth .pictures-four img,
+.container-cost .card-animation .fifth .pictures-five img,
+.container-cost .card-animation .sixth .pictures-six img,
+.container-cost .card-animation .sevth .pictures-seven img,
+.container-cost .card-animation .eith .pictures-eight img,
+.container-cost .card-animation .nineth .pictures-nine img,
+.container-cost .card-animation .tenth .pictures-ten img{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.container-cost .card-animation .first .back1,
+.container-cost .card-animation .second .back2,
+.container-cost .card-animation .third .back3,
+.container-cost .card-animation .fourth .back4,
+.container-cost .card-animation .fifth .back5,
+.container-cost .card-animation .sixth .back6,
+.container-cost .card-animation .sevth .back7,
+.container-cost .card-animation .eith .back8,
+.container-cost .card-animation .nineth .back9,
+.container-cost .card-animation .tenth .back10{
+    transform: rotateY(180deg);
+    background-color: #ffffff;
+    width: 328px;
+    height: 360px;
+    border-radius: 18px;
+}
+
+.container-cost .card-animation .first .pictures-one,
+.container-cost .card-animation .first .back1,
+.container-cost .card-animation .second .pictures-two,
+.container-cost .card-animation .second .back2,
+.container-cost .card-animation .third .pictures-three,
+.container-cost .card-animation .third .back3,
+.container-cost .card-animation .fourth .pictures-four,
+.container-cost .card-animation .fourth .back4,
+.container-cost .card-animation .fifth .pictures-five,
+.container-cost .card-animation .fifth .back5,
+.container-cost .card-animation .sixth .pictures-six,
+.container-cost .card-animation .sixth .back6,
+.container-cost .card-animation .sevth .pictures-seven,
+.container-cost .card-animation .sevth .back7,
+.container-cost .card-animation .eith .pictures-eight,
+.container-cost .card-animation .eith .back8,
+.container-cost .card-animation .nineth .pictures-nine,
+.container-cost .card-animation .nineth .back9,
+.container-cost .card-animation .tenth .pictures-ten,
+.container-cost .card-animation .tenth .back10{
+    position: absolute;
+    transition: 1s;
+    transition-delay: 0.2s;
+    backface-visibility: hidden;
+    cursor: pointer;
+}
+
+
+.container-cost .card-animation .first:hover  .pictures-one,
+.container-cost .card-animation .second:hover  .pictures-two,
+.container-cost .card-animation .third:hover  .pictures-three,
+.container-cost .card-animation .fourth:hover  .pictures-four,
+.container-cost .card-animation .fifth:hover  .pictures-five,
+.container-cost .card-animation .sixth:hover  .pictures-six,
+.container-cost .card-animation .sevth:hover  .pictures-seven,
+.container-cost .card-animation .eith:hover  .pictures-eight,
+.container-cost .card-animation .nineth:hover  .pictures-nine,
+.container-cost .card-animation .tenth:hover  .pictures-ten{
+    transform: rotateY(180deg);
+} 
+
+.container-cost .card-animation .first:hover  .back1,
+.container-cost .card-animation .second:hover  .back2,
+.container-cost .card-animation .third:hover  .back3,
+.container-cost .card-animation .fourth:hover  .back4,
+.container-cost .card-animation .fifth:hover  .back5,
+.container-cost .card-animation .sixth:hover  .back6,
+.container-cost .card-animation .sevth:hover  .back7,
+.container-cost .card-animation .eith:hover  .back8,
+.container-cost .card-animation .nineth:hover  .back9,
+.container-cost .card-animation .tenth:hover  .back10{
+    transform: rotateY(360deg);
+}
+
+
+
+
+
+
+.container-cost .card-animation .first .back1 h5,
+.container-cost .card-animation .second .back2 h5,
+.container-cost .card-animation .third .back3 h5,
+.container-cost .card-animation .fourth .back4 h5,
+.container-cost .card-animation .fifth .back5 h5,
+.container-cost .card-animation .sixth .back6 h5,
+.container-cost .card-animation .sevth .back7 h5,
+.container-cost .card-animation .eith .back8 h5,
+.container-cost .card-animation .nineth .back9 h5,
+.container-cost .card-animation .tenth .back10 h5{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 150%;
+    color: #1F2428; 
+    margin-bottom: 9px;
+    margin-top: 9px;
+}
+
+.container-cost .card-animation .first .back1 p,
+.container-cost .card-animation .second .back2 p,
+.container-cost .card-animation .third .back3 p,
+.container-cost .card-animation .fourth .back4 p,
+.container-cost .card-animation .fifth .back5 p,
+.container-cost .card-animation .sixth .back6 p,
+.container-cost .card-animation .sevth .back7 p,
+.container-cost .card-animation .eith .back8 p,
+.container-cost .card-animation .nineth .back9 p,
+.container-cost .card-animation .tenth .back10 p{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 200%;
+    color: #1F2428;   
+}
+
+
+.container-cost .card-animation .first .back1 .txt-two,
+.container-cost .card-animation .second .back2 .txt-four,
+.container-cost .card-animation .sixth .back6 .txt-elleven,
+.container-cost .card-animation .sevth .back7 .txt13,
+.container-cost .card-animation .nineth .back9 .txt17{
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.container-cost .card-animation .tenth .back10 .txt18{
+    margin-bottom: 109px;
+}
+
+
+
+.container-cost .card-animation .third .back3 .txt-six{
+    margin-top: 18px;
+    margin-bottom: 55px;
+}
+
+.container-cost .card-animation .fourth .back4 .txt-seven{
+   margin-bottom: 109px;
+}
+
+.container-cost .card-animation .fifth .back5 .txt-eight{
+    font-weight: bold;
+}
+
+.container-cost .card-animation .fifth .back5 .txt-nine{
+    margin-top: 13px;
+    margin-bottom: 60px;
+}
+
+.container-cost .card-animation .eith .back8 .txt15{
+    margin-top: 49px;
+    margin-bottom: 60px;
+    font-weight: bold;
+}
+
+.container-cost .card-animation .first .back1 .txt-one .money,
+.container-cost .card-animation .second .back2 .txt-four .money,
+.container-cost .card-animation .third .back3 .txt-five .money,
+.container-cost .card-animation .third .back3 .txt-six .money,
+.container-cost .card-animation .fourth .back4 .txt-seven .money,
+.container-cost .card-animation .fifth .back5 .txt-nine .money,
+.container-cost .card-animation .sixth .back6 .txt-ten .money,
+.container-cost .card-animation .sevth .back7 .txt12 .money,
+.container-cost .card-animation .sevth .back7 .txt13 .money,
+.container-cost .card-animation .eivth .back8 .txt14 .money,
+.container-cost .card-animation .tenth .back10 .txt18 .money{
+    font-weight: bold;
+    color: #1F2428;
+}
+
+.container-cost .card-animation .nineth .back9 .txt16 .money,
+.container-cost .card-animation .nineth .back9 .txt17 .money{
+    font-weight: bold;
+    color: #1F2428;
+}
+
+.container-cost .card-animation .first .back1 .txt-one span,
+.container-cost .card-animation .second .back2 .txt-three span,
+.container-cost .card-animation .third .back3 .txt-five span,
+.container-cost .card-animation .fourth .back4 .txt-seven span,
+.container-cost .card-animation .eith .back8 .txt14 span,
+.container-cost .card-animation .eith .back8 .txt14 span,
+.container-cost .card-animation .nineth .back9 .txt16 span,
+.container-cost .card-animation .nineth .back9 .txt17 span{
+    color: #00C97B;
+    font-weight: bold;
+}
+
+.container-cost .card-animation .first .back1 .txt-two a{
+    font-weight: bold;
+    text-decoration: none;
+    color: #00C97B;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.container-cost .card-animation .first .back1 .txt-two a:hover{
+    color: #1F2428;
+}
+
+
+.container-cost .card-animation .first .back1 a,
+.container-cost .card-animation .second .back2 a,
+.container-cost .card-animation .third .back3 a,
+.container-cost .card-animation .fourth .back4 a,
+.container-cost .card-animation .fifth .back5 a,
+.container-cost .card-animation .sixth .back6 a,
+.container-cost .card-animation .sevth .back7 a,
+.container-cost .card-animation .eith .back8 a,
+.container-cost .card-animation .nineth .back9 a,
+.container-cost .card-animation .tenth .back10 a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 200%;
+    color: #00C97B;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.container-cost .card-animation .first .back1 a:hover,
+.container-cost .card-animation .second .back2 a:hover,
+.container-cost .card-animation .third .back3 a:hover,
+.container-cost .card-animation .fourth .back4 a:hover,
+.container-cost .card-animation .fifth .back5 a:hover,
+.container-cost .card-animation .sixth .back6 a:hover,
+.container-cost .card-animation .sevth .back7 a:hover,
+.container-cost .card-animation .eith .back8 a:hover,
+.container-cost .card-animation .nineth .back9 a:hover,
+.container-cost .card-animation .tenth .back10 a:hover{
+    color: #1F2428;
+}
+
+/* container-three */
+
+.container-three{
+	background: linear-gradient(79.63deg, #5B52A3 1.08%, #40B8EA 100%);
+    border-radius: 36px;
+	margin-bottom: 14px;
+	margin-top: 160px;
+}
+
+.container-three .questions{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 112px;
+	padding-bottom: 112px;
+}
+
+.container-three .questions .txt h1{
+	font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 127%;
+	color: #FFFFFF;
+}
+
+
+/* footer */
+
+footer .up{
+	display: flex;
+}
+
+footer .up .info p{
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 100%;
+	color: #1F2428;
+	margin-bottom: 15px;
+}
+
+footer .up .info ul li a{
+	text-decoration: none;
+	font-weight: 300;
+    font-size: 14px;
+    line-height: 143%;
+	color: #1F2428;
+}
+
+footer .up .info ul li{
+	margin-bottom: 16px;
+}
+
+footer .up .first-info{
+	margin-left: 166px;
+}
+
+footer .up .secon-info{
+	margin-left: 149px;
+}
+
+footer .up .third-info{
+	margin-left: 217px;
+}
+
+footer .up .sochial-network{
+	margin-top: 70px;
+}
+
+footer .up .info{
+	margin-top: 86px;
+	margin-bottom: 55px;
+}
+
+footer .up .sochial-network .internet{
+	margin-top: 34px;
+}
+
+.coopyright .border{
+	border: 1px solid  rgba(192, 201, 215, 0.6) ;
+}
+
+.coopyright  .prava p{
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 154%;
+	text-align: center;
+	color: #1F2428;
+	margin-top: 36px;
+	margin-bottom: 33px;	
+}
+
+
+
+@media screen and (max-width:1920px){
+	.container-cost .card-animation .tenth{
+		display: none;
+	}
+}
+
+
+@media screen and (max-width:1400px){
+	.center{
+		width: 95%;
+	}
+
+	
+}
+
+
+@media screen and (max-width:1300px){
+	.container-three .questions{
+		flex-direction: column;
+		padding-top: 60px;
+        padding-bottom: 60px;
+	}
+
+	.container-three .questions .txt{
+		margin-bottom: 40px;
+	}
+
+	footer .up{
+		flex-direction: column;
+	}
+
+	footer .up .first-info{
+		margin-left: 0px;
+	}
+	
+	footer .up .secon-info{
+		margin-left: 0px;
+	}
+	
+	footer .up .third-info{
+		margin-left: 0px;
+	}
+
+	footer .up .info{
+		margin-top: 35px;
+		margin-bottom: 0px;
+	}
+}
+
+
+
+@media screen and (max-width:1100px){
+	
+
+	
+
+	.container-cost .card-animation{
+		grid-template-columns: 328px 328px ;
+		column-gap: 10px;
+		row-gap: 10px;
+	}
+
+	.container-cost .card-animation .tenth{
+		display:block;
+	}
+}
+
+@media screen and (max-width:1024px){
+	.baner-info .txt-baner .txt h1{
+		font-size: 38px;
+	}
+
+	.baner-info .txt-baner .txt .descr-two{
+		font-size: 21px;
+	}
+
+	.baner-info form button{
+		margin-bottom: 55px;
+	}
+	.container-three .questions .txt h1{
+		font-size: 38px;
+	}
+}
+
+
+@media screen and (max-width:768px){
+	.container-cost .card-animation{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.container-cost .salle-info h3{
+		width: 100%;
+	}
+
+	.container-cost .card-animation .first, 
+	.container-cost .card-animation .second, 
+	.container-cost .card-animation .third, 
+	.container-cost .card-animation .fourth, 
+	.container-cost .card-animation .fifth{
+		width: 100%;
+	}
+	
+
+	.container-cost .card-animation .sixth, 
+	.container-cost .card-animation .sevth, 
+	.container-cost .card-animation .eith, 
+	.container-cost .card-animation .nineth, 
+	.container-cost .card-animation .tenth{
+		display: none;
+	}
+
+
+	.container-cost .card-animation .first .pictures-one, 
+	.container-cost .card-animation .second .pictures-two, 
+	.container-cost .card-animation .third .pictures-three, 
+	.container-cost .card-animation .fourth .pictures-four, 
+	.container-cost .card-animation .fifth .pictures-five{
+		width: 100%;
+		height: 100%;
+	}
+
+	.container-cost .card-animation .first .pictures-one img{
+		object-position: 0 22%;
+	}
+
+	.container-cost .card-animation .fourth .pictures-four img{
+		object-position: 0% 0%;
+	}
+
+	.container-cost .card-animation .first .back1, 
+	.container-cost .card-animation .second .back2, 
+	.container-cost .card-animation .third .back3, 
+	.container-cost .card-animation .fourth .back4, 
+	.container-cost .card-animation .fifth .back5{
+		width: 100%;
+		height: 100%;
+		text-align: center;
+	}
+
+	.container-cost{
+		margin-top: 55px;
+	}
+
+
+	.container-three{
+		margin-top: 75px;
+	}
+
+	footer .up .sochial-network{
+		margin-top: 28px;
+	}
+
+	footer .up .sochial-network .internet{
+		margin-top: 22px;
+	}
+
+
+}
+
+
+
+@media screen and (max-width:600px){
+	
+
+    .baner-info .txt-baner .txt h1{
+		font-size: 36px;
+	}
+
+	.baner-info .txt-baner .txt .descr{
+		font-size: 12px;
+	}
+
+	.baner-info .txt-baner .txt .descr-two{
+		font-size: 20px;
+	}
+
+	.baner-info form button{
+		font-size: 13px;
+		width: 170px;
+	}
+
+	.container-cost .salle-info h3{
+		font-size: 30px;
+		margin-bottom: 40px;
+	}
+
+	.container-cost{
+		margin-top: 40px;
+	}
+
+	.container-three .questions .txt h1{
+		font-size: 32px;
+	}
+
+	
+}
+
+
+@media screen and (max-width:425px){
+    .baner-info form button{
+        margin-top: 25px;
+        margin-bottom: 36px;
+    }
+
+	.container-cost .card-animation .first .pictures-one img{
+		object-position: 80% 22%;
+	}
+
+	.container-three .questions .txt h1{
+		font-size: 30px;
+	}
+
+
+	
+}
+	
+
+	

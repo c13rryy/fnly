@@ -1,0 +1,210 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*************/
+.wrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.center {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+
+.banner {
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.pictures {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Gilroy';
+}
+
+
+/* first-carusel */
+
+@mixin onlylarge($w)
+{
+	@media only screen and (max-width:$w){
+		@content
+	}
+}
+
+
+.first-carusel{
+    margin-top: 160px;
+    @include onlylarge(1400px){
+        width: 95%;
+      }
+    h2{
+        font-weight: 800;
+        font-size: 44px;
+        line-height: 114%;
+        color:#1F2428 ; 
+        width: 447px;
+        @include onlylarge(1024px){
+            margin-bottom: -40px;
+          }
+        @include onlylarge(600px){
+            width: 100%;
+            font-size: 35px;
+          }
+        
+    }
+
+    
+
+    .owl-carousel {
+        margin-top: 64px;
+        display: flex;
+        justify-content: space-evenly;
+        @include onlylarge(1024px){
+            flex-wrap: wrap;
+            margin-top: 24;
+          }
+        .all{
+            display: flex;
+            align-items: center;
+            transition: 0.8s;
+            cursor: pointer; 
+            width: 179px;
+            height: 100px;
+            .txt{
+                p{
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 150%;
+                    color: #1F2428;
+                    margin-left: 17px;
+                    @include onlylarge(1100px){
+                        margin-left: 5px;
+                      }
+
+                }
+            }
+        }
+    }
+
+    .all:hover{
+        background-color:#F2F6FC ;
+    }
+}
+
+/*  */
+
+
+.first-carusel{
+    .owl-carousel{
+       
+        .owl-nav{
+            margin-top: 30px;
+            @include onlylarge(1024px){
+                margin-top: 0;
+              }
+
+            .owl-next{
+                background-image: url(..//images/row-one.svg);
+                background-repeat: no-repeat;
+                transform: rotate(180deg);
+                background-position: left;
+                width: 25px;
+                span{
+                    color:rgba(1, 205, 125, -0.7);
+                  
+                }
+                
+            }
+
+            .owl-next:hover{
+                background-color: #ffffff;
+            }
+
+            .owl-prev{
+                background-image: url(../images/row-one.svg);
+                background-repeat: no-repeat;
+                width: 25px;
+                @include onlylarge(1024px){
+                    margin-right: 55px;
+                  }
+                span{
+                    color:rgba(1, 205, 125, -0.7);
+                }
+            }
+
+            .owl-prev:hover{
+                background-color: #ffffff;
+            }
+        }
+
+        .owl-stage{
+            .owl-item{
+                width: 190px;
+            }
+        }
+    }
+}
+
+/* second-carusel */
+
+.second-carusel{
+    margin-top: 54px;
+}

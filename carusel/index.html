@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="lib/owl.carousel.min.css">
+    <link rel="stylesheet" href="lib/owl.theme.default.min.css">
+    <link rel="stylesheet" href="scss/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <section class="first-carusel center">
+            <h2>
+                Насколько выгодно покупать?
+            </h2>
+
+            <div class="owl-carousel owl-theme">
+                <div class="item all">
+                    <div class="images">
+                        <img src="images/first.svg" alt="first">
+                    </div>
+                    <div class="txt">
+                        <p>Одежда</p>
+                    </div>
+                </div>
+
+                <!--  -->
+                <div class="item all">
+                    <div class="images">
+                        <img src="images/da.svg" alt="second">
+                    </div>
+                    <div class="txt">
+                        <p>Электроника</p>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="item all">
+                    <div class="images">
+                        <img src="images/three.svg" alt="third">
+                    </div>
+                    <div class="txt">
+                        <p>Аксессуары</p>
+                    </div>
+                </div>
+
+                <!--  -->
+
+                <div class="item all">
+                    <div class="images">
+                        <img src="images/four.svg" alt="four">
+                    </div>
+                    <div class="txt">
+                        <p>Для детей</p>
+                    </div>
+                </div>
+                <!--  -->
+
+                <div class="item  all">
+                    <div class="images">
+                        <img src="images/five.svg" alt="five">
+                    </div>
+                    <div class="txt">
+                        <p>Для спорта</p>
+                    </div>
+                </div>
+
+                <!--  -->
+
+                <div class="item all">
+                    <div class="images">
+                        <img src="images/six.svg" alt="six">
+                    </div>
+                    <div class="txt">
+                        <p>Косметика</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="lib/owl.carousel.min.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:50,
+            nav:true,
+            dots: false,
+            responsive:{
+                0:{
+                    items:2
+                },
+                400:{
+                    items:2
+                },
+                600:{
+                    items:4
+                },
+                1000:{
+                    items:4
+                }
+            }
+        })
+    </script>
+</body>
+</html>
