@@ -90,7 +90,6 @@ body {
 
 
 
-
 /* container-two */
 
 @mixin onlylarge($w)
@@ -105,11 +104,11 @@ $white:#FFFFFF;
 $dark:#1F2428;
 
 
+
+
+
+
 /* header */
-
-
-
-
 
 
 header{
@@ -374,7 +373,7 @@ header{
           background: gainsboro;
         }
     }
-
+ 
    
 
     .dn-none-one, .dn-none-two , .dn-none-three, .dn-none-four, .dn-none-five, .dn-none-six{
@@ -388,6 +387,10 @@ header{
             display: none;
           }
     }
+}
+
+.container-three{
+  margin-top: 160px;
 }
 
 @media screen and (max-width: 1400px) {
